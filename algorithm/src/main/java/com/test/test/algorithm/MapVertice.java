@@ -1,5 +1,8 @@
 package com.test.test.algorithm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MapVertice {
 
 	@Override
@@ -29,6 +32,24 @@ public class MapVertice {
 
 	private final int m_yCoordinate;
 	private final int m_xCoordinate;
+	private List<MapVertice> path = new ArrayList<>();
+	private double weight = 1000000;
+	
+	public List<MapVertice> getPath() {
+		return path;
+	}
+
+	public void setPath(List<MapVertice> path) {
+		this.path = path;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
 
 	public MapVertice(int xCoordinate, int yCoordinate) {
 		m_xCoordinate = xCoordinate;

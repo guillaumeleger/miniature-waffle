@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class Graph {
 
@@ -59,11 +60,11 @@ public class Graph {
 		for(MapVertice v : m_vertices) {
 			List<Edge> edges = new ArrayList<>();
 			for(Edge e : m_edges) {
-				if(e.getFrom().equals(v)) {
+				if(e.getFrom().equals(v) || e.getTo().equals(v)) {
 					edges.add(e);
 				}
 			}
-			edgeMap.put(v, edges);
+			edgeMap.put(v, edges.stream().distinct().collect(Collectors.toList()));
 		}
 		return edgeMap;
 	}
