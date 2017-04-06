@@ -1,7 +1,9 @@
 package com.test.test.algorithm;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class Graph {
@@ -50,5 +52,16 @@ public class Graph {
 
 	public List<MapVertice> getVertices() {
 		return m_vertices;
+	}
+	
+	public Map<MapVertice, Edge> getVerticeToEdgeMap() {
+		Map<MapVertice, Edge> edgeMap = new HashMap<>();
+		for(MapVertice v : m_vertices) {
+			for(Edge e : m_edges) {
+				if(e.getFrom().equals(v)) 
+					edgeMap.put(v, e);
+			}
+		}
+		return edgeMap;
 	}
 }
