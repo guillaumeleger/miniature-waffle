@@ -2,6 +2,31 @@ package com.test.test.algorithm;
 
 public class MapVertice {
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + m_xCoordinate;
+		result = prime * result + m_yCoordinate;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MapVertice other = (MapVertice) obj;
+		if (m_xCoordinate != other.m_xCoordinate)
+			return false;
+		if (m_yCoordinate != other.m_yCoordinate)
+			return false;
+		return true;
+	}
+
 	private final int m_yCoordinate;
 	private final int m_xCoordinate;
 
