@@ -16,11 +16,14 @@ public class AlgorithmImpl implements Algorithm{
 		}
 		List<MapVertice> vertices = g.getVertices();
 		List<Edge> edges = g.getEdges();
-		Map<MapVertice, Edge> verticeToEdgeMap = g.getVerticeToEdgeMap();
+		Map<MapVertice, List<Edge>> verticeToEdgeMap = g.getVerticeToEdgeMap();
 		int getxCoordinate = to.getxCoordinate();
 		int getxCoordinate2 = from.getxCoordinate();
 		Stack<MapVertice> stack = new Stack<>();
-		
+		stack.push(from);
+		for(Edge e : verticeToEdgeMap.get(from)) {
+			
+		}
 		return Optional.empty();
 	}
 

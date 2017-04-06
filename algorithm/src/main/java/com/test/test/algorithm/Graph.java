@@ -54,14 +54,16 @@ public class Graph {
 		return m_vertices;
 	}
 	
-	public Map<MapVertice, Edge> getVerticeToEdgeMap() {
-		Map<MapVertice, Edge> edgeMap = new HashMap<>();
+	public Map<MapVertice, List<Edge>> getVerticeToEdgeMap() {
+		Map<MapVertice, List<Edge>> edgeMap = new HashMap<>();
 		for(MapVertice v : m_vertices) {
+			List<Edge> edges = new ArrayList<>();
 			for(Edge e : m_edges) {
 				if(e.getFrom().equals(v)) {
-					edgeMap.put(v, e);
+					edges.add(e);
 				}
 			}
+			edgeMap.put(v, edges);
 		}
 		return edgeMap;
 	}
