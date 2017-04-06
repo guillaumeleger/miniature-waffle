@@ -58,8 +58,9 @@ public class Graph {
 		Map<MapVertice, Edge> edgeMap = new HashMap<>();
 		for(MapVertice v : m_vertices) {
 			for(Edge e : m_edges) {
-				if(e.getFrom().equals(v)) 
+				if(e.getFrom().equals(v)) {
 					edgeMap.put(v, e);
+				}
 			}
 		}
 		return edgeMap;
