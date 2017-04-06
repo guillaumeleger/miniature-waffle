@@ -20,7 +20,7 @@ public class Edge {
 		return m_cost;
 	}
 
-	public MapVertice getMapVerticeo() {
+	public MapVertice getTo() {
 		return m_to;
 	}
 
