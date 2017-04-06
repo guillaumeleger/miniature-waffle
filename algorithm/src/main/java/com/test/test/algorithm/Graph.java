@@ -15,8 +15,8 @@ public class Graph {
 	private static final int N = 30;
 	private static final int E = 60;
 	
-	private final List<Edge> m_edges;
-	private final List<MapVertice> m_vertices;
+	private List<Edge> m_edges;
+	private List<MapVertice> m_vertices;
 
 	public Graph() {
 		m_edges = new ArrayList<Edge>();
@@ -34,6 +34,7 @@ public class Graph {
 		for(int i = 0; i < n; i++) {
 			m_vertices.add(new MapVertice(RAND.nextInt(Integer.MAX_VALUE) % maxX, RAND.nextInt(Integer.MAX_VALUE) % maxY));
 		}
+		m_vertices = m_vertices.stream().distinct().collect(Collectors.toList());
 		int vSize = m_vertices.size();
 		for(int i = 0; i < e; i++) {
 			int a = RAND.nextInt(vSize);
@@ -45,6 +46,7 @@ public class Graph {
 			MapVertice verticeB = m_vertices.get(b);
 			m_edges.add(new Edge(verticeA, verticeB, MapVertice.distance(verticeA, verticeB)));
 		}
+		 m_edges = m_edges.stream().distinct().collect(Collectors.toList());
 	}
 
 	public List<Edge> getEdges() {
@@ -64,7 +66,7 @@ public class Graph {
 					edges.add(e);
 				}
 			}
-			edgeMap.put(v, edges.stream().distinct().collect(Collectors.toList()));
+			edgeMap.put(v, edges);
 		}
 		return edgeMap;
 	}
