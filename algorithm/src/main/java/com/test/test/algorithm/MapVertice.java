@@ -23,4 +23,9 @@ public class MapVertice {
 	public int getxCoordinate() {
 		return m_xCoordinate;
 	}
+
+	@Override
+	public String toString() {
+		return "MapVertice [m_yCoordinate=" + m_yCoordinate + ", m_xCoordinate=" + m_xCoordinate + "]";
+	}
 }

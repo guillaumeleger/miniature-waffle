@@ -16,20 +16,20 @@ public class Graph {
 	private final List<MapVertice> m_vertices;
 
 	public Graph() {
-		generateGraph(MAX_X, MAX_Y, N, E);
 		m_edges = new ArrayList<Edge>();
 		m_vertices = new ArrayList<MapVertice>();
+		generateGraph(MAX_X, MAX_Y, N, E);
 	}
 	
 	public Graph(int maxX, int maxY, int n, int e) {
-		generateGraph(maxX, maxY, n, e);
 		m_edges = new ArrayList<Edge>();
 		m_vertices = new ArrayList<MapVertice>();
+		generateGraph(maxX, maxY, n, e);
 	}
 	
 	private void generateGraph(int maxX, int maxY, int n, int e) {
 		for(int i = 0; i < n; i++) {
-			m_vertices.add(new MapVertice(RAND.nextInt() % maxX, RAND.nextInt() % maxY));
+			m_vertices.add(new MapVertice(RAND.nextInt(Integer.MAX_VALUE) % maxX, RAND.nextInt(Integer.MAX_VALUE) % maxY));
 		}
 		int vSize = m_vertices.size();
 		for(int i = 0; i < e; i++) {
@@ -44,11 +44,11 @@ public class Graph {
 		}
 	}
 
-	public List<Edge> getM_edges() {
+	public List<Edge> getEdges() {
 		return m_edges;
 	}
 
-	public List<MapVertice> getM_vertices() {
+	public List<MapVertice> getVertices() {
 		return m_vertices;
 	}
 }

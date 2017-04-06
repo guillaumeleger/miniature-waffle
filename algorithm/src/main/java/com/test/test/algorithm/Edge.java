@@ -23,4 +23,9 @@ public class Edge {
 	public MapVertice getMapVerticeo() {
 		return m_to;
 	}
+
+	@Override
+	public String toString() {
+		return "Edge [m_cost=" + m_cost + ", m_to=" + m_to + ", m_from=" + m_from + "]";
+	}
 }
