@@ -15,10 +15,14 @@ public class Graph {
 	private final List<Edge> m_edges;
 	private final List<MapVertice> m_vertices;
 
-	
-	
 	public Graph() {
 		generateGraph(MAX_X, MAX_Y, N, E);
+		m_edges = new ArrayList<Edge>();
+		m_vertices = new ArrayList<MapVertice>();
+	}
+	
+	public Graph(int maxX, int maxY, int n, int e) {
+		generateGraph(maxX, maxY, n, e);
 		m_edges = new ArrayList<Edge>();
 		m_vertices = new ArrayList<MapVertice>();
 	}
@@ -38,5 +42,13 @@ public class Graph {
 			MapVertice verticeB = m_vertices.get(b);
 			m_edges.add(new Edge(verticeA, verticeB, MapVertice.distance(verticeA, verticeB)));
 		}
+	}
+
+	public List<Edge> getM_edges() {
+		return m_edges;
+	}
+
+	public List<MapVertice> getM_vertices() {
+		return m_vertices;
 	}
 }
