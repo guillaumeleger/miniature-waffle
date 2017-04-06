@@ -10,7 +10,7 @@ public class MapVertice {
 		m_yCoordinate = yCoordinate;
 	}
 
-	public double distance(MapVertice from, MapVertice to) {
+	public static double distance(MapVertice from, MapVertice to) {
 		int xDelta = from.getxCoordinate() - to.getxCoordinate();
 		int yDelta = from.getyCoordinate() - to.getyCoordinate();
 		return Math.sqrt(xDelta * xDelta + yDelta * yDelta);

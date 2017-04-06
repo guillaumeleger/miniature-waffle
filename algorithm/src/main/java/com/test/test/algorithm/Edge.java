@@ -1,26 +1,26 @@
 package com.test.test.algorithm;
 
-public class Edge<T> {
+public class Edge {
 	
-	private final int m_cost;
-	private final T m_to;
-	private final T m_from;
+	private final double m_cost;
+	private final MapVertice m_to;
+	private final MapVertice m_from;
 
-	public Edge(T from, T to, int cost) {
+	public Edge(MapVertice from, MapVertice to, double cost) {
 		m_from = from;
 		m_to = to;
 		m_cost = cost;
 	}
 
-	public T getFrom() {
+	public MapVertice getFrom() {
 		return m_from;
 	}
 
-	public int getCost() {
+	public double getCost() {
 		return m_cost;
 	}
 
-	public T getTo() {
+	public MapVertice getMapVerticeo() {
 		return m_to;
 	}
 }
