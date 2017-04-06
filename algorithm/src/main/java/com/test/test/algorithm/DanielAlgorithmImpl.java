@@ -16,6 +16,7 @@ public class DanielAlgorithmImpl {
 		this.to = to;
 		vertices = g.getVertices();
 		map = g.getVerticeToEdgeMap();
+		from.setWeight(0);
 		traverse(from);
 		if(to.getPath().size() > 0) {
 			return to.getPath();
@@ -26,6 +27,9 @@ public class DanielAlgorithmImpl {
 
 	public void traverse(MapVertice current) {
 		if(current.equals(to)) {
+			List<MapVertice> path = current.getPath();
+			path.add(current);
+			to.setPath(path);
 			return;
 		}
 		List<Edge> currentEdges = map.get(current);
