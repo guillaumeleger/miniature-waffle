@@ -1,5 +1,7 @@
 package com.test.test.algorithm;
 
+import com.test.test.algorithm.graph.Graph;
+import com.test.test.algorithm.graph.MapVertice;
 import java.util.List;
 import org.junit.Test;
 

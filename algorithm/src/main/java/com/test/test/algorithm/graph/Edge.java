@@ -1,4 +1,4 @@
-package com.test.test.algorithm;
+package com.test.test.algorithm.graph;
 
 public class Edge {
 	

@@ -1,5 +1,9 @@
 package com.test.test.algorithm;
 
+import com.test.test.algorithm.graph.Edge;
+import com.test.test.algorithm.graph.Graph;
+import com.test.test.algorithm.graph.MapVertice;
+import com.test.test.algorithm.graph.algorithm.Algorithm;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -62,6 +66,18 @@ public class GuillaumeBestAlgorithmImpl implements Algorithm{
 			}
 		}
 		return Optional.ofNullable(temp);
+	}
+
+	@Override
+	public void depthFirstSearch(Graph g, MapVertice from, MapVertice to) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void breadthFirstSearch(Graph g, MapVertice from, MapVertice to) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

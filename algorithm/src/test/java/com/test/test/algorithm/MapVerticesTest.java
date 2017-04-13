@@ -1,5 +1,6 @@
 package com.test.test.algorithm;
 
+import com.test.test.algorithm.graph.MapVertice;
 import org.junit.Assert;
 import org.junit.Test;
 
